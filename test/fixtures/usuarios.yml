@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nome: 
+  webSite: 
+  dataNascimento: 2012-06-10 20:17:29
+  sexo: 
+  dataCadastro: 2012-06-10 20:17:29
+  flgMensagemPublica: false
+  flgAddAutomatico: false
+  cidade_id: 1
+
+two:
+  nome: 
+  webSite: 
+  dataNascimento: 2012-06-10 20:17:29
+  sexo: 
+  dataCadastro: 2012-06-10 20:17:29
+  flgMensagemPublica: false
+  flgAddAutomatico: false
+  cidade_id: 1

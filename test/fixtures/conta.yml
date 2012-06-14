@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  usuario_id: 1
+  perfil_id: 1
+  email: MyString
+  senha: MyString
+  ativo: false
+  dataCadastro: 2012-06-11 23:22:50
+  dataUltimoAcesso: 2012-06-11 23:22:50
+
+two:
+  usuario_id: 1
+  perfil_id: 1
+  email: MyString
+  senha: MyString
+  ativo: false
+  dataCadastro: 2012-06-11 23:22:50
+  dataUltimoAcesso: 2012-06-11 23:22:50

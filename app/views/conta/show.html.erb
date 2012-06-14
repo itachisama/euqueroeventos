@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @contum.usuario_id %>
+</p>
+
+<p>
+  <b>Perfil:</b>
+  <%= @contum.perfil_id %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @contum.email %>
+</p>
+
+<p>
+  <b>Senha:</b>
+  <%= @contum.senha %>
+</p>
+
+<p>
+  <b>Ativo:</b>
+  <%= @contum.ativo %>
+</p>
+
+<p>
+  <b>Datacadastro:</b>
+  <%= @contum.dataCadastro %>
+</p>
+
+<p>
+  <b>Dataultimoacesso:</b>
+  <%= @contum.dataUltimoAcesso %>
+</p>
+
+
+<%= link_to 'Edit', edit_contum_path(@contum) %> |
+<%= link_to 'Back', conta_path %>
