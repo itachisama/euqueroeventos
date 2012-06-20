@@ -1,7 +1,7 @@
 EuQueroEventos::Application.routes.draw do
   resources :tags
 
-  resources :conta
+  resources :contas
 
   resources :usuarios
 

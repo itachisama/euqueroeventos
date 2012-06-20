@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120612022249) do
+ActiveRecord::Schema.define(:version => 20120612023517) do
 
   create_table "categoria", :force => true do |t|
     t.string   "nome",       :limit => 30, :null => false
@@ -51,6 +51,18 @@ ActiveRecord::Schema.define(:version => 20120612022249) do
     t.boolean  "ativo",                    :null => false
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+  end
+
+  create_table "status_mensagens", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "nome"
+    t.boolean  "ativo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "usuarios", :force => true do |t|

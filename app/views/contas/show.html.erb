@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @conta.usuario_id %>
+</p>
+
+<p>
+  <b>Perfil:</b>
+  <%= @conta.perfil_id %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @conta.email %>
+</p>
+
+<p>
+  <b>Senha:</b>
+  <%= @conta.senha %>
+</p>
+
+<p>
+  <b>Ativo:</b>
+  <%= @conta.ativo %>
+</p>
+
+<p>
+  <b>Datacadastro:</b>
+  <%= @conta.dataCadastro %>
+</p>
+
+
+<%= link_to 'Edit', edit_conta_path(@conta) %> |
+<%= link_to 'Back', contas_path %>

@@ -1,5 +1,5 @@
 class Cidade < ActiveRecord::Base
-  attr_accessible :nome, :estado_uf
+  set_table_name "cidades"
   belongs_to :estado
   validates :nome,:estado_uf, :presence =>true
   validates :nome,:length=> { :maximum => 50 }

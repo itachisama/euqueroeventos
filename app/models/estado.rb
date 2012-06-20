@@ -1,5 +1,6 @@
 class Estado < ActiveRecord::Base
-  attr_accessible :nome, :uf
+  set_table_name "estados"
+  has_many :cidades
   validates :nome,:uf, :presence=>true
   validates :nome, :length => { :maximum => 30 }
 
