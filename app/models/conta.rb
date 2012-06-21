@@ -4,6 +4,7 @@ class Conta < ActiveRecord::Base
   belongs_to :usuario
 
   validates :senha,:confirmation=>true
-  validates :email,:uniqueness=>true
+  validates :email,:uniqueness=>true,
+            :format =>{:with=> /^[^@][\w.-]+@[\w.-]+[.][a-z]{2,4}$/i}
   
 end
