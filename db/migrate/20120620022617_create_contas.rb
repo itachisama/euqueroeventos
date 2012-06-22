@@ -1,12 +1,12 @@
 class CreateContas < ActiveRecord::Migration
   def change
     create_table :contas do |t|
-      t.integer :usuario_id
-      t.integer :perfil_id
-      t.string :email
-      t.string :senha
-      t.boolean :ativo
-      t.datetime :dataCadastro
+      t.integer :usuario_id, :null=>false
+      t.integer :perfil_id, :null=>false
+      t.string :email, :null=>false
+      t.string :senha, :null=>false
+      t.boolean :ativo, :null=>false
+      t.datetime :dataCadastro, :null=>false
 
       t.timestamps
     end
