@@ -1,0 +1,31 @@
+<h1>Listing comentario_eventos</h1>
+
+<table>
+  <tr>
+    <th>Usuario</th>
+    <th>Evento</th>
+    <th>Ativo</th>
+    <th>Cadastro</th>
+    <th>Comentario</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @comentario_eventos.each do |comentario_evento| %>
+  <tr>
+    <td><%= comentario_evento.usuario_id %></td>
+    <td><%= comentario_evento.evento_id %></td>
+    <td><%= comentario_evento.ativo %></td>
+    <td><%= comentario_evento.cadastro %></td>
+    <td><%= comentario_evento.comentario %></td>
+    <td><%= link_to 'Show', comentario_evento %></td>
+    <td><%= link_to 'Edit', edit_comentario_evento_path(comentario_evento) %></td>
+    <td><%= link_to 'Destroy', comentario_evento, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Comentario evento', new_comentario_evento_path %>

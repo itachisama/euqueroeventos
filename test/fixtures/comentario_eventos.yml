@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  usuario_id: 1
+  evento_id: 1
+  ativo: false
+  cadastro: 2012-06-22 00:01:08
+  comentario: MyText
+
+two:
+  usuario_id: 1
+  evento_id: 1
+  ativo: false
+  cadastro: 2012-06-22 00:01:08
+  comentario: MyText

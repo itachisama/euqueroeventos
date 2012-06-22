@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @lista_contato.usuario_id %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @lista_contato.nome %>
+</p>
+
+<p>
+  <b>Padrao:</b>
+  <%= @lista_contato.padrao %>
+</p>
+
+<p>
+  <b>Privada:</b>
+  <%= @lista_contato.privada %>
+</p>
+
+
+<%= link_to 'Edit', edit_lista_contato_path(@lista_contato) %> |
+<%= link_to 'Back', listas_contato_path %>

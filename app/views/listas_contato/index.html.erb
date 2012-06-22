@@ -1,0 +1,29 @@
+<h1>Listing listas_contato</h1>
+
+<table>
+  <tr>
+    <th>Usuario</th>
+    <th>Nome</th>
+    <th>Padrao</th>
+    <th>Privada</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @listas_contato.each do |lista_contato| %>
+  <tr>
+    <td><%= lista_contato.usuario_id %></td>
+    <td><%= lista_contato.nome %></td>
+    <td><%= lista_contato.padrao %></td>
+    <td><%= lista_contato.privada %></td>
+    <td><%= link_to 'Show', lista_contato %></td>
+    <td><%= link_to 'Edit', edit_lista_contato_path(lista_contato) %></td>
+    <td><%= link_to 'Destroy', lista_contato, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lista contato', new_lista_contato_path %>

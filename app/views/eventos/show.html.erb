@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Inicio:</b>
+  <%= @evento.inicio %>
+</p>
+
+<p>
+  <b>Fim:</b>
+  <%= @evento.fim %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @evento.nome %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @evento.descricao %>
+</p>
+
+<p>
+  <b>Privado:</b>
+  <%= @evento.privado %>
+</p>
+
+<p>
+  <b>Endereco:</b>
+  <%= @evento.endereco %>
+</p>
+
+<p>
+  <b>Maioridade:</b>
+  <%= @evento.maioridade %>
+</p>
+
+<p>
+  <b>Gratuito:</b>
+  <%= @evento.gratuito %>
+</p>
+
+<p>
+  <b>Limitado:</b>
+  <%= @evento.limitado %>
+</p>
+
+<p>
+  <b>Vagasdisponiveis:</b>
+  <%= @evento.vagasDisponiveis %>
+</p>
+
+<p>
+  <b>Vagasoferecidas:</b>
+  <%= @evento.vagasOferecidas %>
+</p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @evento.usuario_id %>
+</p>
+
+<p>
+  <b>Categoria:</b>
+  <%= @evento.categoria_id %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%= @evento.cidade_id %>
+</p>
+
+<p>
+  <b>Status evento:</b>
+  <%= @evento.status_evento_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_evento_path(@evento) %> |
+<%= link_to 'Back', eventos_path %>

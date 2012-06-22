@@ -1,0 +1,37 @@
+<%= form_for(@contato) do |f| %>
+  <% if @contato.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contato.errors.count, "error") %> prohibited this contato from being saved:</h2>
+
+      <ul>
+      <% @contato.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lista_contato_id %><br />
+    <%= f.number_field :lista_contato_id %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario_id %><br />
+    <%= f.number_field :usuario_id %>
+  </div>
+  <div class="field">
+    <%= f.label :status_contato_id %><br />
+    <%= f.number_field :status_contato_id %>
+  </div>
+  <div class="field">
+    <%= f.label :inclusao %><br />
+    <%= f.datetime_select :inclusao %>
+  </div>
+  <div class="field">
+    <%= f.label :alteracao %><br />
+    <%= f.datetime_select :alteracao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

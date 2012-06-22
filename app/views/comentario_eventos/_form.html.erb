@@ -1,0 +1,37 @@
+<%= form_for(@comentario_evento) do |f| %>
+  <% if @comentario_evento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comentario_evento.errors.count, "error") %> prohibited this comentario_evento from being saved:</h2>
+
+      <ul>
+      <% @comentario_evento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :usuario_id %><br />
+    <%= f.number_field :usuario_id %>
+  </div>
+  <div class="field">
+    <%= f.label :evento_id %><br />
+    <%= f.number_field :evento_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ativo %><br />
+    <%= f.check_box :ativo %>
+  </div>
+  <div class="field">
+    <%= f.label :cadastro %><br />
+    <%= f.datetime_select :cadastro %>
+  </div>
+  <div class="field">
+    <%= f.label :comentario %><br />
+    <%= f.text_area :comentario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

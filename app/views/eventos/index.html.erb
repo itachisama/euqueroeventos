@@ -1,0 +1,51 @@
+<h1>Listing eventos</h1>
+
+<table>
+  <tr>
+    <th>Inicio</th>
+    <th>Fim</th>
+    <th>Nome</th>
+    <th>Descricao</th>
+    <th>Privado</th>
+    <th>Endereco</th>
+    <th>Maioridade</th>
+    <th>Gratuito</th>
+    <th>Limitado</th>
+    <th>Vagasdisponiveis</th>
+    <th>Vagasoferecidas</th>
+    <th>Usuario</th>
+    <th>Categoria</th>
+    <th>Cidade</th>
+    <th>Status evento</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @eventos.each do |evento| %>
+  <tr>
+    <td><%= evento.inicio %></td>
+    <td><%= evento.fim %></td>
+    <td><%= evento.nome %></td>
+    <td><%= evento.descricao %></td>
+    <td><%= evento.privado %></td>
+    <td><%= evento.endereco %></td>
+    <td><%= evento.maioridade %></td>
+    <td><%= evento.gratuito %></td>
+    <td><%= evento.limitado %></td>
+    <td><%= evento.vagasDisponiveis %></td>
+    <td><%= evento.vagasOferecidas %></td>
+    <td><%= evento.usuario_id %></td>
+    <td><%= evento.categoria_id %></td>
+    <td><%= evento.cidade_id %></td>
+    <td><%= evento.status_evento_id %></td>
+    <td><%= link_to 'Show', evento %></td>
+    <td><%= link_to 'Edit', edit_evento_path(evento) %></td>
+    <td><%= link_to 'Destroy', evento, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Evento', new_evento_path %>

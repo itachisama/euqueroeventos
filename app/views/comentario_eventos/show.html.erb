@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @comentario_evento.usuario_id %>
+</p>
+
+<p>
+  <b>Evento:</b>
+  <%= @comentario_evento.evento_id %>
+</p>
+
+<p>
+  <b>Ativo:</b>
+  <%= @comentario_evento.ativo %>
+</p>
+
+<p>
+  <b>Cadastro:</b>
+  <%= @comentario_evento.cadastro %>
+</p>
+
+<p>
+  <b>Comentario:</b>
+  <%= @comentario_evento.comentario %>
+</p>
+
+
+<%= link_to 'Edit', edit_comentario_evento_path(@comentario_evento) %> |
+<%= link_to 'Back', comentario_eventos_path %>

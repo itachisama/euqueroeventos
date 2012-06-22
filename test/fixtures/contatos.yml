@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lista_contato_id: 1
+  usuario_id: 1
+  status_contato_id: 1
+  inclusao: 2012-06-22 00:05:35
+  alteracao: 2012-06-22 00:05:35
+
+two:
+  lista_contato_id: 1
+  usuario_id: 1
+  status_contato_id: 1
+  inclusao: 2012-06-22 00:05:35
+  alteracao: 2012-06-22 00:05:35

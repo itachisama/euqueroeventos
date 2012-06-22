@@ -1,4 +1,12 @@
 EuQueroEventos::Application.routes.draw do
+  resources :contatos
+
+  resources :listas_contato
+
+  resources :comentario_eventos
+
+  resources :eventos
+
   resources :tags
 
   resources :contas

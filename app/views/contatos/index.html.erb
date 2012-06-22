@@ -1,0 +1,31 @@
+<h1>Listing contatos</h1>
+
+<table>
+  <tr>
+    <th>Lista contato</th>
+    <th>Usuario</th>
+    <th>Status contato</th>
+    <th>Inclusao</th>
+    <th>Alteracao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contatos.each do |contato| %>
+  <tr>
+    <td><%= contato.lista_contato_id %></td>
+    <td><%= contato.usuario_id %></td>
+    <td><%= contato.status_contato_id %></td>
+    <td><%= contato.inclusao %></td>
+    <td><%= contato.alteracao %></td>
+    <td><%= link_to 'Show', contato %></td>
+    <td><%= link_to 'Edit', edit_contato_path(contato) %></td>
+    <td><%= link_to 'Destroy', contato, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Contato', new_contato_path %>

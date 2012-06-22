@@ -1,0 +1,33 @@
+<%= form_for(@lista_contato) do |f| %>
+  <% if @lista_contato.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lista_contato.errors.count, "error") %> prohibited this lista_contato from being saved:</h2>
+
+      <ul>
+      <% @lista_contato.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :usuario_id %><br />
+    <%= f.number_field :usuario_id %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :padrao %><br />
+    <%= f.check_box :padrao %>
+  </div>
+  <div class="field">
+    <%= f.label :privada %><br />
+    <%= f.check_box :privada %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

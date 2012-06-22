@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  inicio: 2012-06-21 23:51:16
+  fim: 2012-06-21 23:51:16
+  nome: MyString
+  descricao: MyText
+  privado: false
+  endereco: MyText
+  maioridade: false
+  gratuito: false
+  limitado: false
+  vagasDisponiveis: 1
+  vagasOferecidas: 1
+  usuario_id: 1
+  categoria_id: 1
+  cidade_id: 1
+  status_evento_id: 1
+
+two:
+  inicio: 2012-06-21 23:51:16
+  fim: 2012-06-21 23:51:16
+  nome: MyString
+  descricao: MyText
+  privado: false
+  endereco: MyText
+  maioridade: false
+  gratuito: false
+  limitado: false
+  vagasDisponiveis: 1
+  vagasOferecidas: 1
+  usuario_id: 1
+  categoria_id: 1
+  cidade_id: 1
+  status_evento_id: 1
