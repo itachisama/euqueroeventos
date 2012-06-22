@@ -1,5 +1,5 @@
 class Tag < ActiveRecord::Base
-  set_table_name "tags"
+  attr_accessible	:nome, :ativo
   validates :nome,:presence =>true,
             :length =>{:maximum=>20}
 end

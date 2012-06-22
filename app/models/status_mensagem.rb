@@ -1,3 +1,5 @@
 class StatusMensagem < ActiveRecord::Base
-  set_table_name "status"
+  attr_accessible :nome, :codigo
+  has_many :mensagens
+  validates :nome, :codigo, :presence=>true
 end
