@@ -1,14 +1,156 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>EuQueroEventos</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-teste doido
-<%= yield %>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Eu Quero Eventos</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="contener">
+			<!-- Barra de cadastramento-->       
+			<div id="barra">
+				<div class="align">
+					<p>Olá visitante cadastre-se | Use seu Facebook para fazer seu login | cadastre-se para receber os eventos de sua cidade </p>
+				</div>    
+			</div>
+			<!-- Fim Barra-->
+			
+			<!--Começo Header-->
+			<div id="header">        	
+				<div id="cadastro">
+					<a href="#" alt="#">Cadastro</a>
+				</div>				
+				<div id="login">
+					<a href="#" alt="#">Login</a>
+				</div>				
+				<div id="menu">				
+				</div>			
+			<!--Fim Header-->
+			</div>
+        
+			<!--Banner-Principal-->
+			<div id="banner-principal">		
+				<%= image_tag "banner-principal.jpg", :alt=>"banner" %>
+			<!--Fim Banner-Principal-->
+			</div>
+        
+			<!--Busca-->
+			<div id="busca">
+        		<div class="filtersType">
+                	<div id="filterCategory" class="filterList">
+						<label for="categoriesList">Escolha a cidade:</label>
+						<select id="categoriesList">
+							<option selected="selected" class="" value="1">Rio de Janeiro</option><option  class="" value="2">São Paulo</option><option  class="" value="3">Minas Gerais</option><option  class="" value="4">Brasilia</option><option  class="" value="5">Coritiba</option><option  class="" value="6">Salvador</option><option  class="" value="7">Parana</option><option  class="" value="8">Porto Alegre</option><option  class="" value="9">Recife</option>
+						</select>
+					</div>
 
-</body>
+					<div id="filterOrder" class="filterList">
+						<label for="orderList">Escolha o tipo de evento:</label>
+						<select id="orderList">						
+						<option selected="selected" class="" value="1">Todas Categorias</option><option  class="" value="2">Shows/boates</option><option  class="" value="3">GLBT</option><option  class="" value="4">Cinema</option><option  class="" value="5">Teatro</option><option  class="" value="6">Turismo</option><option  class="" value="7">Games</option><option  class="" value="8">Esportes</option><option  class="" value="9">Anime</option><option  class="" value="9">Cultura</option><option  class="" value="9">Palestra</option><option  class="" value="9">Cursos/Workshops</option><option  class="" value="9">Religiosos</option>
+						</select>
+					</div>
+				</div>
+
+				<div id="search">
+					<label for="searchField">Pesquisar palavra-chave</label>
+					<input type="text" id="searchField" name="searchField" />
+					<button id="submitSearch" class="send" type="submit">Procurar</button>		
+				</div>
+			<!--Fim Busca-->
+			</div>
+        
+			<!--Lista-eventos-->
+			<div id="lista-eventos">				
+				<%= yield %>			
+			<!--Fim Lista-eventos-->
+			</div>
+			
+			<div class="barra-lateral">			
+				<h1>Publicidade</h1>
+				<ul>
+					<li>
+						<a href="#campanha1" class="campanha">
+							<%= image_tag "banner-lateral.jpg", :alt=>"DSBR_PHILIPS" %><br />
+						</a>
+					</li>
+					<li>
+						<a href="#campanha2" class="campanha">
+							<%= image_tag "banner-lateral.jpg", :alt=>"DSBR_PHILIPS" %><br />
+						</a>
+					</li>
+					<li>
+						<a href="#campanha3" class="campanha">
+							<%= image_tag "banner-lateral.jpg", :alt=>"DSBR_OREGON" %><br />
+						</a>
+					</li>
+					<li>
+						<a href="#campanha4" class="campanha">
+							<%= image_tag "banner-lateral.jpg", :alt=>"DSBR_OREGON" %><br />
+						</a>
+					</li>
+					<li>
+						<a href="#campanha5" class="campanha">
+							<%= image_tag "banner-lateral.jpg", :alt=>"DSBR_MASTERCARD" %><br/>
+						</a>
+					</li>
+				</ul>			
+			</div>
+			<div id="footer">
+				<div class="content">
+				<!-- Divs com display:none pelo new_footer.css -->
+					<div class="column1 infos">
+						<h1>Mapa do site</h1>
+						<ul>
+							<li><span></span><a href="#">Home</a></li>
+							<li><span></span><a href="#">Eventos</a></li>
+							<li><span></span><a href="#">Contatos </a></li>                           
+                            <li><span></span><a href="#">Login</a></li>                            
+                            <li><span></span><a href="#">Cadastro</a></li>
+						</ul>
+					</div>
+
+					<div class="column1 visite">
+						<h1>Informações</h1>
+						<ul>
+							<li><span></span><a href="#">Quem Somos</a></li>
+							<li><span></span><a href="#">Trabalhe Conosco</a></li>
+							<li><span></span><a href="#">Contatos </a></li>                           
+                            <li><span></span><a href="#">Faça seu Anuncio</a></li>                            
+                            <li><span></span><a href="#">Política de privacidade</a></li>
+						</ul>
+					</div>
+					<div class="column1 last social">
+						<h1>Newsletter</h1>
+						<div class="news">
+							<div>
+								<form action="/idc/groups/public/documents/dfyshp_pt/dfy-shp-mail/index.jsp" method="post" id="Newsletter" name="Newsletter">
+									<input type="hidden" id="urlCurrent" name="urlCurrent" value="#" />
+									<input class="text_email" id="emailText" name="emailText" class="size1" type="text" value="informe aqui seu e-mail" />
+									<input name="btnSubmit" class="bt-receber" type="submit" />
+								</form>
+							</div>
+							<a id="unsubscribe" title="N&atilde;o quero mais receber a newsletter" href="#">N&atilde;o quero mais receber a newsletter</a>
+						</div>
+                        <div class="share">
+							<h2>Redes Sociais</h2>
+							<ul>
+								<li>
+									<a class="facebook" title="Facebook" target="_blank" href="http://www.facebook.com/">Facebook</a>
+								</li>
+								<li>
+									<a class="twitter" title="Twitter" target="_blank" href="http://twitter.com/">Twitter</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				<!-- end content footer -->	
+				</div> 
+			<!-- end footer -->
+			</div> 
+		<!-- end container -->
+		</div> 
+	</body>
 </html>
