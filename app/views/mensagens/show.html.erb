@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Mensagem:</b>
+  <%= @mensagem.mensagem %>
+</p>
+
+<p>
+  <b>Dataenvio:</b>
+  <%= @mensagem.dataEnvio %>
+</p>
+
+<p>
+  <b>Assunto:</b>
+  <%= @mensagem.assunto %>
+</p>
+
+<p>
+  <b>Status mensagem:</b>
+  <%= @mensagem.status_mensagem %>
+</p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @mensagem.usuario %>
+</p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @mensagem.usuario %>
+</p>
+
+
+<%= link_to 'Edit', edit_mensagem_path(@mensagem) %> |
+<%= link_to 'Back', mensagens_path %>

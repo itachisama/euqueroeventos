@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mensagem: MyText
+  dataEnvio: 2012-06-27 23:06:14
+  assunto: MyString
+  status_mensagem: 1
+  usuario: 1
+  usuario: 1
+
+two:
+  mensagem: MyText
+  dataEnvio: 2012-06-27 23:06:14
+  assunto: MyString
+  status_mensagem: 1
+  usuario: 1
+  usuario: 1

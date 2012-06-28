@@ -1,4 +1,6 @@
 EuQueroEventos::Application.routes.draw do
+  resources :mensagens
+
   resources :contatos
 
   resources :listas_contato

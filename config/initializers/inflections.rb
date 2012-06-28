@@ -31,4 +31,6 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'status_evento', 'status_eventos'
   inflect.irregular 'cidade', 'cidades'
   inflect.irregular 'estado', 'estados'
+  inflect.irregular 'participante', 'participantes'
+  inflect.irregular 'convidado', 'convidados'
 end
