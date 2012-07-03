@@ -4,7 +4,7 @@ class CreateContas < ActiveRecord::Migration
       t.integer :usuario_id, :null=>false
       t.integer :perfil_id, :null=>false
       t.string :email, :null=>false
-      t.string :senha, :null=>false
+      t.string :encrypted_password, :null=>false
       t.boolean :ativo, :null=>false
       t.datetime :dataCadastro, :null=>false
 

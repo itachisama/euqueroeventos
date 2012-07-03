@@ -6,7 +6,7 @@ class CreateEventos < ActiveRecord::Migration
       t.string :nome,:null=>false, :limit=>150
       t.text :descricao,:null=>false
       t.boolean :privado,:null=>false
-      t.text :endereco,:null=>true, :limit=>200
+      t.text :endereco,:null=>true
       t.boolean :maioridade,:null=>false
       t.boolean :gratuito,:null=>false
       t.boolean :limitado,:null=>false

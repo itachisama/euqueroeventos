@@ -28,14 +28,14 @@ ActiveRecord::Schema.define(:version => 20120620022617) do
   end
 
   create_table "contas", :force => true do |t|
-    t.integer  "usuario_id"
-    t.integer  "perfil_id"
-    t.string   "email"
-    t.string   "senha"
-    t.boolean  "ativo"
-    t.datetime "dataCadastro"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.integer  "usuario_id",         :null => false
+    t.integer  "perfil_id",          :null => false
+    t.string   "email",              :null => false
+    t.string   "encrypted_password", :null => false
+    t.boolean  "ativo",              :null => false
+    t.datetime "dataCadastro",       :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "estados", :force => true do |t|
@@ -52,15 +52,17 @@ ActiveRecord::Schema.define(:version => 20120620022617) do
   end
 
   create_table "status_mensagens", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "nome",       :limit => 30, :null => false
+    t.string   "codigo",     :limit => 3,  :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
 
   create_table "tags", :force => true do |t|
-    t.string   "nome"
-    t.boolean  "ativo"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "nome",       :limit => 20, :null => false
+    t.boolean  "ativo",                    :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
 
   create_table "usuarios", :force => true do |t|

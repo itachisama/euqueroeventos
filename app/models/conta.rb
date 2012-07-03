@@ -1,5 +1,12 @@
 class Conta < ActiveRecord::Base
-  attr_accessible :ativo, :dataCadastro, :email, :perfil_id, :senha, :usuario_id
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :confirmable,
+  # :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :perfil_id, :password, :usuario_id, :password_confirmation, :remember_me, :ativo, :dataCadastro
   belongs_to :perfil
   belongs_to :usuario
 

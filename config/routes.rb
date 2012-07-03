@@ -1,4 +1,6 @@
 EuQueroEventos::Application.routes.draw do
+  devise_for :contas
+
   resources :mensagens
 
   resources :contatos
