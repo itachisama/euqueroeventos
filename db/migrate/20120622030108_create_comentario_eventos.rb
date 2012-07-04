@@ -5,7 +5,7 @@ class CreateComentarioEventos < ActiveRecord::Migration
       t.integer :evento_id, :null=>false
       t.boolean :ativo, :null=>false
       t.datetime :cadastro, :null=>false
-      t.text :comentario, :null=>false, :limit=>300
+      t.text :comentario, :null=>false
 
       t.timestamps
     end
