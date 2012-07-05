@@ -40,9 +40,18 @@
     <%= f.check_box :flgAddAutomatico %>
   </div>
   <div class="field">
-    <%= f.label :cidade_id %><br />
-    <%= f.number_field :cidade_id %>
+    <%= f.label "Estado" %><br />
+    <%= collection_select(:estado, :id, Estado.all, :id, :uf, {:prompt => true})  %>
   </div>
+
+  <% if @estado %>
+    <div class="field">
+      <%= f.label :cidade_id %><br />
+      <%= select(:usuario, :cidade_id, @cidades) %>
+    </div>
+  <% end %>
+
+  
   <div class="actions">
     <%= f.submit %>
   </div>

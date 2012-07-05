@@ -81,4 +81,16 @@ class UsuariosController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  #app/controllers/people_controller.rb
+
+ def carregar_cidades
+   unless params[:estado_id].blank?
+     @estado = Estado.find(params[:estado_id])
+     @cidades = @estado.cidades.collect { |c| [c.name, c.id] }
+     render :layout => false
+   end
+ end
+
+
 end

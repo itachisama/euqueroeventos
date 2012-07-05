@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120622025115) do
+ActiveRecord::Schema.define(:version => 20120703012206) do
 
   create_table "categorias", :force => true do |t|
     t.string   "nome",       :limit => 30, :null => false
@@ -27,21 +27,91 @@ ActiveRecord::Schema.define(:version => 20120622025115) do
     t.datetime "updated_at",               :null => false
   end
 
+  create_table "comentario_eventos", :force => true do |t|
+    t.integer  "usuario_id", :null => false
+    t.integer  "evento_id",  :null => false
+    t.boolean  "ativo",      :null => false
+    t.datetime "cadastro",   :null => false
+    t.text     "comentario", :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "contas", :force => true do |t|
-    t.integer  "usuario_id",         :null => false
-    t.integer  "perfil_id",          :null => false
-    t.string   "email",              :null => false
-    t.string   "encrypted_password", :null => false
-    t.boolean  "ativo",              :null => false
-    t.datetime "dataCadastro",       :null => false
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.integer  "usuario_id",                            :null => false
+    t.integer  "perfil_id",                             :null => false
+    t.string   "email",                                 :null => false
+    t.string   "encrypted_password",                    :null => false
+    t.boolean  "ativo",                                 :null => false
+    t.datetime "dataCadastro",                          :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+  end
+
+  add_index "contas", ["reset_password_token"], :name => "index_contas_on_reset_password_token", :unique => true
+
+  create_table "contatos", :force => true do |t|
+    t.integer  "lista_contato_id",  :null => false
+    t.integer  "usuario_id",        :null => false
+    t.integer  "status_contato_id", :null => false
+    t.datetime "inclusao",          :null => false
+    t.datetime "alteracao",         :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "estados", :force => true do |t|
     t.string   "uf",         :limit => 2, :null => false
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
+  end
+
+  create_table "eventos", :force => true do |t|
+    t.datetime "inicio",                          :null => false
+    t.datetime "fim",                             :null => false
+    t.string   "nome",             :limit => 150, :null => false
+    t.text     "descricao",                       :null => false
+    t.boolean  "privado",                         :null => false
+    t.text     "endereco"
+    t.boolean  "maioridade",                      :null => false
+    t.boolean  "gratuito",                        :null => false
+    t.boolean  "limitado",                        :null => false
+    t.integer  "vagasDisponiveis"
+    t.integer  "vagasOferecidas"
+    t.integer  "usuario_id",                      :null => false
+    t.integer  "categoria_id",                    :null => false
+    t.integer  "cidade_id"
+    t.integer  "status_evento_id",                :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  create_table "listas_contato", :force => true do |t|
+    t.integer  "usuario_id",               :null => false
+    t.string   "nome",       :limit => 30, :null => false
+    t.boolean  "padrao",                   :null => false
+    t.boolean  "privada",                  :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
+  create_table "mensagens", :force => true do |t|
+    t.text     "mensagem",                          :null => false
+    t.datetime "dataEnvio",                         :null => false
+    t.string   "assunto",            :limit => 100, :null => false
+    t.integer  "status_mensagem_id",                :null => false
+    t.integer  "remetente_id",                      :null => false
+    t.integer  "destinatario_id",                   :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   create_table "perfis", :force => true do |t|

@@ -1,7 +1,7 @@
 class CreateMensagens < ActiveRecord::Migration
   def change
     create_table :mensagens do |t|
-      t.text :mensagem, :null=>false, :limit=>500
+      t.text :mensagem, :null=>false
       t.datetime :dataEnvio, :null=>false
       t.string :assunto, :null=>false,:limit=>100
       t.integer :status_mensagem_id, :null=>false
