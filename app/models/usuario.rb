@@ -1,5 +1,5 @@
 class Usuario < ActiveRecord::Base
-	attr_accessible :nome, :sexo, :website, :cidade_id
+	attr_accessible :nome, :sexo, :website, :cidade_id, :id
 	validates :nome, :presence =>true
 	validates :nome,:webSite, :length=> { :maximum => 100 }
 	validates :sexo, :length=> { :is => 1 }

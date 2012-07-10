@@ -26,10 +26,11 @@ class ContasController < ApplicationController
   # GET /contas/new.json
   def new
     @conta = Conta.new
-
+    @usuario = Usuario.new
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @conta }
+      format.json { render json: @usuario }
     end
   end
 
@@ -42,7 +43,13 @@ class ContasController < ApplicationController
   # POST /contas.json
   def create
     @conta = Conta.new(params[:conta])
-
+    @usuario =  @conta.usuario_build(params[:usuario])
+    @usuario.dataCadastro = Date.current
+    @conta.dataCadastro=Date.current
+    @conta.perfil_id = 1
+    @conta.ativo = true
+    @usuario.save
+    @conta.usuario_id = @usuario.id
     respond_to do |format|
       if @conta.save
         format.html { redirect_to @conta, notice: 'Conta was successfully created.' }

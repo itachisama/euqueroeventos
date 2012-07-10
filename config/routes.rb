@@ -1,5 +1,7 @@
 EuQueroEventos::Application.routes.draw do
-  devise_for :contas
+  devise_for :contas,:controllers => {:registrations => "registrations"}
+
+  root :to => "home#index"
 
   resources :mensagens
 

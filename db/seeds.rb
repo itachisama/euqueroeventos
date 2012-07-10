@@ -5,6 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Perfil.create([
+  {:nome=>"rule_usuario",:ativo=>true},
+  {:nome=>"rule_administrador",:ativo=>true}
+  ])
+
 Categoria.create([
                 {:ativo=>true,:nome =>'Música'},
                 {:ativo=>true,:nome =>'Games'},

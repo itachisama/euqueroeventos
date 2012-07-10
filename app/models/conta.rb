@@ -9,8 +9,7 @@ class Conta < ActiveRecord::Base
   attr_accessible :email, :perfil_id, :password, :usuario_id, :password_confirmation, :remember_me, :ativo, :dataCadastro
   belongs_to :perfil
   belongs_to :usuario
-
-  validates :senha,:confirmation=>true
+  
   validates :email,:uniqueness=>true,
             :format =>{:with=> /^[^@][\w.-]+@[\w.-]+[.][a-z]{2,4}$/i}
   
