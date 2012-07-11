@@ -1,19 +1,18 @@
 # app/controllers/registrations_controller.rb
 class RegistrationsController < Devise::RegistrationsController
   def new
-    super
-    @usuario = Usuario.new
-#    respond_to do |format|
-#      format.html # new.html.erb
-#      format.json { render json: @usuario }
-#    end
+    #super
+    @conta = Conta.new
+    @conta.build_usuario
   end
   
   def create
     # add custom create logic here
-    @conta = Conta.new(params[:conta])    
+    @conta = Conta.new(params[:conta])
+    @conta.dataCadastro = DateTime.now.utc
+    @conta.usuario.dataCadastro= DateTime.now.utc
     respond_to do |format|
-        if @conta.save && @conta.create_usuario()
+        if @conta.save
           format.html { redirect_to @conta, notice: 'Conta was successfully created.' }
           format.json { render json: @conta, status: :created, location: @conta }
         else

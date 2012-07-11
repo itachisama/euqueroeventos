@@ -9,7 +9,13 @@
       <% end %>
       </ul>
     </div>
-  <% end %> 
+  <% end %>
+  <%= f.fields_for :usuario do |us| %>
+    <div class="field">
+      <%= us.label :nome %><br />
+      <%= us.text_field :nome %>
+    </div>
+  <% end %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>

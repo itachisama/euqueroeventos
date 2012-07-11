@@ -5,7 +5,7 @@ class CreateContas < ActiveRecord::Migration
       t.string :email, :null=>false
       t.string :encrypted_password, :null=>false
       t.boolean :ativo, :null=>false, :default=>true
-      t.datetime :dataCadastro, :null=>false, :default=>Date.current
+      t.datetime :dataCadastro, :null=>false
       t.timestamps
     end
     execute "ALTER TABLE contas ADD FOREIGN KEY (perfil_id) REFERENCES perfis(id);"

@@ -5,7 +5,7 @@ class CreateUsuarios < ActiveRecord::Migration
       t.string :webSite, :limit=>100, :null=>true
       t.date :dataNascimento, :null=>true
       t.string :sexo, :limit=>1, :null=>true
-      t.datetime :dataCadastro, :null=>false, :default=>Date.current
+      t.datetime :dataCadastro, :null=>false
       t.boolean :flgMensagemPublica, :null=>false,:default=>true
       t.boolean :flgAddAutomatico, :null=>false,:default=>false
       t.integer :cidade_id, :null=>true

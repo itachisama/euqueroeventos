@@ -38,13 +38,13 @@ ActiveRecord::Schema.define(:version => 20120703012206) do
   end
 
   create_table "contas", :force => true do |t|
-    t.integer  "perfil_id",              :default => 1,                     :null => false
-    t.string   "email",                                                     :null => false
-    t.string   "encrypted_password",                                        :null => false
-    t.boolean  "ativo",                  :default => true,                  :null => false
-    t.datetime "dataCadastro",           :default => '2012-07-11 00:00:00', :null => false
-    t.datetime "created_at",                                                :null => false
-    t.datetime "updated_at",                                                :null => false
+    t.integer  "perfil_id",              :default => 1,    :null => false
+    t.string   "email",                                    :null => false
+    t.string   "encrypted_password",                       :null => false
+    t.boolean  "ativo",                  :default => true, :null => false
+    t.datetime "dataCadastro",                             :null => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -149,18 +149,18 @@ ActiveRecord::Schema.define(:version => 20120703012206) do
   end
 
   create_table "usuarios", :force => true do |t|
-    t.string   "nome",               :limit => 100,                                    :null => false
+    t.string   "nome",               :limit => 100,                    :null => false
     t.string   "webSite",            :limit => 100
     t.date     "dataNascimento"
     t.string   "sexo",               :limit => 1
-    t.datetime "dataCadastro",                      :default => '2012-07-11 00:00:00', :null => false
-    t.boolean  "flgMensagemPublica",                :default => true,                  :null => false
-    t.boolean  "flgAddAutomatico",                  :default => false,                 :null => false
+    t.datetime "dataCadastro",                                         :null => false
+    t.boolean  "flgMensagemPublica",                :default => true,  :null => false
+    t.boolean  "flgAddAutomatico",                  :default => false, :null => false
     t.integer  "cidade_id"
-    t.integer  "conta_id",                                                             :null => false
+    t.integer  "conta_id",                                             :null => false
     t.binary   "imagemPerfil"
-    t.datetime "created_at",                                                           :null => false
-    t.datetime "updated_at",                                                           :null => false
+    t.datetime "created_at",                                           :null => false
+    t.datetime "updated_at",                                           :null => false
   end
 
 end
