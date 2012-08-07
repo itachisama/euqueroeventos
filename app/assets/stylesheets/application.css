@@ -15,7 +15,7 @@
 	height: 1798px;
 	width: 1024px;
 	border: thin solid #000;
-	margin:0;
+	margin:0 auto;
 	padding:0;
 	
 }
@@ -37,10 +37,20 @@
 }
 
 #contener #header {
-	height: 223px;
 	width: 1024px;
 	border: thin solid #666;
+        height: auto;
 }
+#contener #header #logo {
+	width: 300px;
+	margin-top:35px;
+	margin-left:28px;
+}
+
+#contener #header #logo a{
+        text-decoration: none;
+}
+
 #contener #banner-principal {
 	background-color: #CCC;
 	height: 356px;
@@ -56,9 +66,7 @@
 	height: 47px;
 	width: 99px;
 	margin-right:5px;
-	margin-top:128px;
 	float: right;
-	
 }
 
 #contener #header #login a {
@@ -84,7 +92,6 @@
 	height: 47px;
 	width: 99px;
 	margin-right:25px;
-	margin-top:128px;
 	float: right;
 	
 }
@@ -105,11 +112,11 @@
 }
 
 
-#contener #header #menu {
+#contener #menu {
 	background-color: #333;
 	height: 47px;
 	width: 1024px;
-	margin-top: 177px;
+	
 }
 #contener #busca {
 	background-color: #F2F2F2;
@@ -131,8 +138,7 @@
 	float: left;
 }
 
-#contener .barra-lateral {
-	background-color:;
+#contener .barra-lateral {	
 	height: 1302px;
 	width: 165px;
 	margin-right: 25px;
@@ -240,7 +246,7 @@
 			
 		}
 			 #footer .content .column1 .news input.bt-receber { 
-				background: url("img/btn_ok.png") no-repeat scroll left top transparent;
+				background: url("btn_ok.png") no-repeat scroll left top transparent;
 				border: 0 solid;
 				cursor: pointer;
 				display: block;
@@ -278,28 +284,46 @@
 		width: 150px;
 		margin-left:-40px;
 	}
-		 #footer .content .share ul li a {
-			display: block;
-			height: 36px;
-			width: 100px;
-			padding: 5px 0 0 30px;
-			text-transform: none;
-		}
-			 #footer .content .share ul li a.facebook {
-				background: url("img/facebook.png") no-repeat scroll left top transparent;
-			}
-			#footer .content .share ul li a.twitter {
-				background: url("img/twitter.png") no-repeat scroll left top transparent;
-			}*
-			
-			
-			
-			
-			/* FILTERS */		
+        #footer .content .share ul li a {
+                display: block;
+                height: 36px;
+                width: 100px;
+                padding: 5px 0 0 30px;
+                text-transform: none;
+        }
+        #footer .content .share ul li a.facebook {
+                background: url("facebook.png") no-repeat scroll left top transparent;
+        }
+        #footer .content .share ul li a.twitter {
+                background: url("twitter.png") no-repeat scroll left top transparent;
+        }
+        #footer .content #assinatura {
+	color: #FFFFFF;
+    width:290px;
+	height:20px;
+	margin-left:770px;
+	float:left;
+	margin-top:-30px;
+	font-family:Arial;
+	font-size:12px;
+}
+#footer .content #assinatura p {
+	font-size: 12px;
+	font-family:Arial;
+	text-decoration: none;
+}
+ #footer .content #assinatura p a{
+	color:#FFFFFF;
+	font-family:Arial;
+	text-decoration: none;
+}
 
-
-
-
+#footer .content #assinatura p a:hover{
+	color:#999999;
+	font-family:Arial;
+	text-decoration: underline;
+}
+        /* FILTERS */
 #contener #busca .filtersType{
 	float: left;
 	padding: 0px 20px 0px;

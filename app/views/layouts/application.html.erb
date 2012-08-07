@@ -18,19 +18,27 @@
 			<!-- Fim Barra-->
 			
 			<!--Começo Header-->
-			<div id="header">        	
+			<div id="header">
+                                <div id="logo">
+                                  <a style="text-decoration: none !important;" href="index.html">
+                                    <%= image_tag "logo.png", :alt=>"Eu Quero Eventos" %>
+                                  </a>
+                                </div>
+
 				<div id="cadastro">
 					<a href="#" alt="#">Cadastro</a>
 				</div>				
-				<div id="login">
+				<div id="login" >
 					<a href="#" alt="#">Login</a>
-				</div>				
-				<div id="menu">
-                                  <%= render "layouts/menu" %>
-				</div>			
+				</div>
+
+                                <div style="clear: both;"></div>
+				
 			<!--Fim Header-->
 			</div>
-        
+                        <div id="menu">
+                          <%= render "layouts/menu" %>
+                        </div>
 			<!--Banner-Principal-->
 			<div id="banner-principal">		
 				<%= image_tag "banner-principal.jpg", :alt=>"banner" %>
@@ -146,7 +154,10 @@
 								</li>
 							</ul>
 						</div>
+                                                
 					</div>
+                                <div id="assinatura">
+                    <p> Web design: <a href="http://oikabumrio.org.br/igor.iaso/" target="_blank">igor.iaso </a></p></div>
 				<!-- end content footer -->	
 				</div> 
 			<!-- end footer -->
