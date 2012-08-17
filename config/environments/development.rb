@@ -37,5 +37,7 @@ EuQueroEventos::Application.configure do
 
   # Add the config.action_mailer.default_url_options
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-
+  
+  # Previne duplicação de includes de js
+  config.serve_static_assets = false
 end

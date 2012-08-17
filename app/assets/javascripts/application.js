@@ -12,8 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery_ui
+//= require jmenu
+//= require main
 //= require_tree .
-= require jquery
-= require jquery_ui
-= require jmenu
-= require main
