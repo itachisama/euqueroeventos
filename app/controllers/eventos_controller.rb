@@ -1,5 +1,7 @@
 
 class EventosController < ApplicationController
+   load_and_authorize_resource
+
   # GET /eventos
   # GET /eventos.json
   def index

@@ -74,23 +74,24 @@ ActiveRecord::Schema.define(:version => 20120703012206) do
   end
 
   create_table "eventos", :force => true do |t|
-    t.datetime "inicio",                          :null => false
-    t.datetime "fim",                             :null => false
-    t.string   "nome",             :limit => 150, :null => false
-    t.text     "descricao",                       :null => false
-    t.boolean  "privado",                         :null => false
+    t.datetime "inicio",                           :null => false
+    t.datetime "fim",                              :null => false
+    t.string   "nome",              :limit => 150, :null => false
+    t.text     "descricao",                        :null => false
+    t.boolean  "privado",                          :null => false
     t.text     "endereco"
-    t.boolean  "maioridade",                      :null => false
-    t.boolean  "gratuito",                        :null => false
-    t.boolean  "limitado",                        :null => false
-    t.integer  "vagasDisponiveis"
-    t.integer  "vagasOferecidas"
-    t.integer  "usuario_id",                      :null => false
-    t.integer  "categoria_id",                    :null => false
+    t.boolean  "maioridade",                       :null => false
+    t.boolean  "gratuito",                         :null => false
+    t.boolean  "limitado",                         :null => false
+    t.integer  "vagas_disponiveis"
+    t.integer  "vagas_oferecidas"
+    t.integer  "usuario_id",                       :null => false
+    t.integer  "categoria_id",                     :null => false
     t.integer  "cidade_id"
-    t.integer  "status_evento_id",                :null => false
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.integer  "status_evento_id",                 :null => false
+    t.string   "tipo_evento",                      :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
   end
 
   create_table "listas_contato", :force => true do |t|

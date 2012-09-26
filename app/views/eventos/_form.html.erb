@@ -24,6 +24,10 @@
     <%= f.text_field :nome %>
   </div>
   <div class="field">
+    <%= f.label :tipo_evento %><br />
+    Presencial <%= f.radio_button :tipo_evento, "PRE" %>  Evento Web  <%= f.radio_button :tipo_evento, "WEB" %>
+  </div>
+  <div class="field">
     <%= f.label :descricao %><br />
     <%= f.text_area :descricao %>
   </div>
@@ -49,11 +53,11 @@
   </div>
   <div class="field">
     <%= f.label :vagasDisponiveis %><br />
-    <%= f.number_field :vagasDisponiveis %>
+    <%= f.number_field :vagas_disponiveis %>
   </div>
   <div class="field">
     <%= f.label :vagasOferecidas %><br />
-    <%= f.number_field :vagasOferecidas %>
+    <%= f.number_field :vagas_oferecidas %>
   </div>
   <div class="field">
     <%= f.label :usuario_id %><br />

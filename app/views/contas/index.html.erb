@@ -15,10 +15,10 @@
 
 <% @contas.each do |conta| %>
   <tr>
-    <td><%= conta.usuario_id %></td>
+    
     <td><%= conta.perfil_id %></td>
     <td><%= conta.email %></td>
-    <td><%= conta.senha %></td>
+    <td><%= conta.password %></td>
     <td><%= conta.ativo %></td>
     <td><%= conta.dataCadastro %></td>
     <td><%= link_to 'Show', conta %></td>

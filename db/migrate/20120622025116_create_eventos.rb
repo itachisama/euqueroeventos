@@ -10,13 +10,13 @@ class CreateEventos < ActiveRecord::Migration
       t.boolean :maioridade,:null=>false
       t.boolean :gratuito,:null=>false
       t.boolean :limitado,:null=>false
-      t.integer :vagasDisponiveis,:null=>true
-      t.integer :vagasOferecidas,:null=>true
+      t.integer :vagas_disponiveis,:null=>true
+      t.integer :vagas_oferecidas,:null=>true
       t.integer :usuario_id,:null=>false
       t.integer :categoria_id,:null=>false
       t.integer :cidade_id,:null=>true
       t.integer :status_evento_id,:null=>false
-
+      t.string :tipo_evento,:null=>false
       t.timestamps
     end
 	execute "ALTER TABLE eventos ADD FOREIGN KEY (usuario_id) REFERENCES usuarios(id);"

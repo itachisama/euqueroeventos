@@ -1,5 +1,6 @@
 
 class ComentarioEventosController < ApplicationController
+   load_and_authorize_resource
   # GET /comentario_eventos
   # GET /comentario_eventos.json
   def index

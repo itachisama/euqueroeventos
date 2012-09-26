@@ -1,5 +1,7 @@
 
 class ListasContatoController < ApplicationController
+   load_and_authorize_resource
+
   # GET /listas_contato
   # GET /listas_contato.json
   def index
